@@ -29,4 +29,35 @@
 2. DOM简单学习
 3. 事件简单学习
 
+## 2020.4.19 (p61-p72)
 
+1. BOM的三个主要对象：Window、Location、History，包括他们的方法、属性
+2. Document、Element、Node对象
+## 2020.4.20 (p73-p80)
+
+1. 学习了HTML的DOM，InnerHTML、样式控制
+2. 学习了常见事件，键盘、鼠标
+3. 学习了3个案例（常见的表单校验）
+
+## 2020.4.21 (p81-p99)
+
+1. 了解BootStrap
+2. 学习使用BootStrap下的CSS全局样式、JS插件、响应式布局
+3. BootStrap菜鸟使用需要有3文件（js、css、font）以及一些必要的资源引入。
+4. 入门xml，了解xml的组成：文档声明等
+5. 了解xml的两种约束：dtd、schema，要求做到能简单地读懂约束文档。
+
+## 2020.4.22 (p100-p107)
+
+1. 学习了xml的解析器：Jsoup
+2. 快速入门Jsoup
+3. **学习Jsoup对象的使用：Document、Elements、Element**
+4. **学习两种快速查询方法：selector选择器、XPath**
+
+## 2020.4.23 (p108-p123)
+
+1. 学习tomcat、Servlet
+2. 学习tomcat服务器的相关配置，在IDEA上的配置
+3. 了解tomcat的基本内容
+4. 学习Servlet，快速入门，以及5个抽象方法
+5. 了解IDEA与tomcat的相关配置关系。！！！
