@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+<body>
+    <input id="btn" type="button" value="刷新">
+    <input id="goGithub" type="button" value="去github" >
+    <script>
+        // reload()
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            location.reload();
+        };
+
+        var goGithub = document.getElementById("goGithub");
+        goGithub.onclick = function(){
+            location.href = "https://github.com/MDL-MZP";
+        };
+
+        // 获取href, 拿当前网址，已编码
+        // var href = location.href;
+        // alert(href);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns="http://www.itcast.cn/xml"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.itcast.cn/xml" elementFormDefault="qualified">
+    <!--  定义元素名students,类型是自定义的studentsType,需要在下面声明  -->
+    <xsd:element name="students" type="studentsType"/>
+    <!--  声明复合类型(complexType) studentsType  -->
+    <xsd:complexType name="studentsType">
+        <!--
+            按顺序出现(sequence),又定义name元素,这里是按顺序出现student元素.
+            student元素的类型studentType,还是需要在下面声明.
+            minOccurs最少出现次数指定;
+            maxOccurs最多出现次数指定: unbounded未指定
+         -->
+        <xsd:sequence>
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="studentType">
+        <xsd:sequence>
+            <!--  定义了元素name,类型是字符串 xsd:string  -->
+            <xsd:element name="name" type="xsd:string"/>
+            <!--  自定义类型ageType、sexType  -->
+            <xsd:element name="age" type="ageType"/>
+            <xsd:element name="sex" type="sexType"/>
+        </xsd:sequence>
+        <!--  attribute属性,属性名字是number,类型是numberType(自定义).
+              use="required"表示该属性是必须的
+        -->
+        <xsd:attribute name="number" type="numberType" use="required"/>
+    </xsd:complexType>
+    <!--  声明简单类型(simpleType) sexType  -->
+    <xsd:simpleType name="sexType">
+        <!--  限制(restriction),base基本数据格式  -->
+        <xsd:restriction base="xsd:string">
+                <!--  枚举(enumeration),表明只能在枚举中取其一  -->
+                <xsd:enumeration value="male"/>
+                <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!--  声明简单类型(simpleType) ageType  -->
+    <xsd:simpleType name="ageType">
+        <!--  限制(restriction),base基本数据格式  -->
+        <xsd:restriction base="xsd:integer">
+                <!--  规定上下限  -->
+                <xsd:minInclusive value="0"/>
+                <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="numberType">
+        <xsd:restriction base="xsd:string">
+            <!-- 正则 -->
+            <xsd:pattern value="heima_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

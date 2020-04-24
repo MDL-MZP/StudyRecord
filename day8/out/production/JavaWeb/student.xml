@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<students>
+
+    <student number="heima_0001">
+        <!--  JsoupDemo4的获取文本样例  -->
+
+            <name id="MZP">
+                <xing>zhang</xing>
+                <ming>san</ming>
+            </name>
+
+        <!--<name id="MZP">zhangsan</name>-->
+        <age>11</age>
+        <sex>male</sex>
+    </student>
+
+    <student number="heima_0002">
+        <name>lisi</name>
+        <age>11</age>
+        <sex>female</sex>
+    </student>
+
+</students>

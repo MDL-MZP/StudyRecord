@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+
+</head>
+<body>
+    <input id="openbtn" type="button" value="打开窗口">
+    <input id="closebtn" type="button" value="关闭窗口">
+    <script>
+        // alert()属于警告框，只有一个确定按钮
+        // alert("我属于window方法");
+        // window.alert("你看吧");
+
+        // confirm()属于对话框，有两个按钮，还有返回值
+        // var flag = confirm("确定要退出吗？");
+        // if(flag){
+        //     alert("欢迎再次光临");
+        // }else{
+        //     alert("抖啥呢");
+        // }
+
+        // 用户可输入的对话框
+        // var result = prompt("请输入用户名");
+        // alert(result);
+
+        //打开新窗口
+        // var openbtn = document.getElementById("openbtn");
+        // var newwindow;
+        // openbtn.onclick = function () {
+        //     newwindow = open("https://www.baidu.com");
+        //
+        // };
+
+        // 关闭窗口
+        // var closebtn = document.getElementById("closebtn");
+        // closebtn.onclick = function () {
+        //     newwindow.close();
+        // };
+
+        // 一次性定时器
+        // 1. 调用方法, 注意：用 fun()方法一定要加""，否则就不是在3000ms后执行fun()
+        // setTimeout("fun()",3000);
+        // 2. 引用对象
+        // var id = setTimeout(fun,2000);
+        // clearTimeout(id);
+
+        // 实现指定次数爆炸
+        var i = 0;
+        function fun() {
+            alert("boom");
+            i++;
+            if(i == 3) {
+                clearInterval(id2);
+            }
+        }
+
+        // 循环定时器, 后面的单位是ms
+        // var id2 = setInterval(fun,4000);
+
+        // 获取history
+        // var h1 = window.history;
+        // var h2 = history;
+        // alert(h1);
+        // alert(h2);
+
+        var openbtn = window.document.getElementById("openbtn");
+        document.getElementById("");
+        alert(openbtn);
+
+    </script>
+</body>
+</html>

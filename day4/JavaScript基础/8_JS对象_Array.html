@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array对象</title>
+    <script>
+        // 创建方式
+        var arr1 = new Array(1,2,3);
+        var arr2 = new Array(5);
+        var arr3 = [1,2,3,4];
+        var arr4 = new Array();
+        document.write(arr1+"<br>");
+        document.write(arr2+"<br>");
+        document.write(arr3+"<br>");
+        document.write(arr4+"<br>");
+
+        var arr = [1,"abc",true];
+        document.write(arr+"<br>");
+        document.write(arr[0]+"<br>");
+        document.write(arr[1]+"<br>");
+        document.write(arr[2]+"<br>");
+        document.write(arr.length+"<br>");
+        // 访问越界也无所谓，undefined就完事了
+        document.write(arr[10]+"<br>");
+        // 越界的元素，不算入长度
+        document.write(arr.length+"<br>");
+        // 给下标10的元素赋值
+        arr[10] = "hehe";
+        document.write(arr[10]+"<br>");
+        // 长度发生变化，中间未定义的全为undefined
+        document.write(arr.length+"<br>");
+
+        // join: 拼接成字符串，不指定参数，默认是逗号,即是跟 直接输出 arr一样（形式一样）
+        document.write(arr.join()+"<br>");
+        document.write(arr.join("-")+"<br>");
+
+        //  末尾加元素
+        arr.push(11);
+        document.write(arr.join("-")+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

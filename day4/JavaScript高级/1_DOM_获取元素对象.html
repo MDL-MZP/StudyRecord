@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素对象</title>
+</head>
+<body>
+    <img src="./img/off.gif" alt="关灯" id="light">
+    <h1 id="1">马志鹏最帅</h1>
+    <script>
+        var light = document.getElementById("light");
+        alert("换图片啊");
+        light.src= "./img/on.gif";
+
+        var title = document.getElementById("1");
+        alert("换内容");
+        // 更换HTML页面内的内容，就innerHTML
+        title.innerHTML = "马志鹏说的都有道理";
+
+    </script>
+</body>
+</html>

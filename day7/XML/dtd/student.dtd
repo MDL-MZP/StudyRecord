@@ -1,0 +1,24 @@
+<!--
+    element:元素
+    students:根标签,因为是第一个element
+    (student+): 在students后面,表示 students标签的子标签,"+"是正则中出现一次或多次的表达
+-->
+<!--
+    student(name,age,sex):规定了student标签下的name,age,sex, dtd中定义时顺序可以改变,在xml文档中不能改变
+    name(#PCDATA):表示name标签的内容为 字符串
+    age(#PCDATA):表示age标签的内容为 字符串
+    sex(#PCDATA):表示sex标签的内容为 字符串
+-->
+<!--
+    ATTLIST: 属性
+    ATTLIST student number ID :定义了student标签的属性number,类型ID
+    #REQUIRED: 必须出现
+-->
+<!ELEMENT students (student+) >
+<!ELEMENT student (name,age,sex) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT sex (#PCDATA) >
+<!ELEMENT age (#PCDATA) >
+<!ATTLIST student number ID #REQUIRED>
+
+

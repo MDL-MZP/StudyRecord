@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    1.填写xml根元素
+    2.引入xsi前缀,xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  !!!必须的引入
+    3.引入xsd文件命名空间, xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"  在引号内可以引入多个xsd文件
+    4. 为每一个xsd约束声明一个前缀,作为标识,  xmlns="http://www.itcast.cn/xml" 无前缀表示默认,例子中为students,
+       自定义形式为  xmlns:自定义名称="http://www.itcast.cn/xml"
+       这个问题主要解决: 以后引入多个xsd文件时,出现同一属性无法确认应用哪个xsd文件的约束,
+           🔺例如有这样一个前缀a:  xmlns:a="http://www.itcast.cn/xml"
+           🔺运用如下:
+           <a:student number="heima_0001">
+                <a:name>zhangsan</a:name>
+                <a:age>11</a:age>
+                <a:sex>male</a:sex>
+            </a:student>
+-->
+<students
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.itcast.cn/xml student.xsd"
+            xmlns="http://www.itcast.cn/xml"
+>
+
+    <student number="heima_0001">
+        <name>zhangsan</name>
+        <age>11</age>
+        <sex>male</sex>
+    </student>
+
+    <student number="heima_0002">
+        <name>lisi</name>
+        <age>11</age>
+        <sex>female</sex>
+    </student>
+
+</students>

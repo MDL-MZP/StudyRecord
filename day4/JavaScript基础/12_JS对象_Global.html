@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global对象</title>
+    <script>
+        var str = "http://www.baidu.com?wd=传智播客";
+        var encode = encodeURI(str);
+        document.write(encode+"<br>");
+        var s = decodeURI(encode);
+        document.write(s+"<br>");
+
+        document.write("<hr>");
+
+        var str1 = "http://www.baidu.com?wd=传智播客";
+        var encode1 = encodeURIComponent(str1);
+        document.write(encode1+"<br>");
+        var s1 = decodeURIComponent(encode1);
+        document.write(s1+"<br>");
+
+        document.write("<hr>");
+
+        var str2 = "123abc";
+        var number = parseInt(str2);
+        document.write(number+1 + "<br>");
+
+        var str3 = "a123abc";
+        var number1 = parseInt(str3);
+        document.write(number1+1 + "<br>");
+
+        document.write("<hr>");
+
+        var a = "acb";
+        document.write((a == NaN) + "<br>");
+        var b = NaN;
+        document.write((b == NaN) + "<br>");
+        document.write(isNaN(b)+"<br>");
+
+        document.write("<hr>");
+
+        var jscode = "alert(123)";
+        document.write(jscode+"<br>");
+        eval(jscode);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

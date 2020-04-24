@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式对象</title>
+    <script>
+        // 创建方式
+        var reg = new RegExp("^\\w{6,12}$");
+        var reg2 = /^\w{1,2}$/;
+        document.write(reg+"<br>");
+        document.write(reg2+"<br>");
+        var username = "zhangsan";
+        var flag = reg.test(username);
+        document.write(flag+"<br>");
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电灯开关</title>
+</head>
+<body>
+    <img id="light" src="img/off.gif">
+    <script>
+        var flag = false;
+        //貌似在获取事件对象时，如果不指定谁来接收，默认是跟属性名一样的对象
+        // document.getElementById("light"); 就跟 var light = document.getElementById("light"); 一样
+        var light = document.getElementById("light");
+        light.onclick = function () {
+            if(flag){
+                light.src = "./img/off.gif";
+                flag = false;
+            }else{
+                light.src = "./img/on.gif";
+                flag = true;
+            }
+        }
+    </script>
+</body>
+</html>
