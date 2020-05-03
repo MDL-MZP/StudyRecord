@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    /*
+        点击超链接或者图片，需要换一张
+        1. 给 超链接或者图片 绑定单击事件
+        2. 重新设置图片的src属性
+    */
+    window.onload = function () {
+        // 1. 获取图片对象
+        var img = document.getElementById("checkCode");
+        img.onclick = function () {
+            // 后面加的是无实际意义的参数，因为客户端访问服务器图片后，会缓存在本地。
+            // 你多次访问，服务器都会让客户端拿上次缓存好的图片，所以每次都得加点不一样的东西
+            // 加时间戳
+            var date = new Date().getTime();
+            img.src = "/day14/checkCodeServlet?"+date;
+        };
+
+        var change = document.getElementById("change");
+        change.onclick = function () {
+            var date = new Date().getTime();
+            img.src = "/day14/checkCodeServlet?"+date;
+        };
+
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            var date = new Date().getTime();
+            img.src = "/day14/checkCodeServlet?"+date;
+        }
+    }
+</script>
+<body>
+
+<input type="button" id = "btn" value="刷新">
+<img src="/day14/checkCodeServlet" id="checkCode">
+<a id="change" href="javascript:void(0)" >看不清楚换一张？</a>
+
+</body>
+</html>
